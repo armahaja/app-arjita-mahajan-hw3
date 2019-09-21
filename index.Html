@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["formDetails"]["firstname"].value;
+  if (x == "") {
+    document.getElementById("formValidation").innerHTML = "<span style='color: red;'><b>First Name cannot be empty!!!<b></span>";
+    return false;
+  }
+   x = document.forms["formDetails"]["lastname"].value;
+  if (x == "") {
+    document.getElementById("formValidation").innerHTML = "<span style='color: red;'><b>Last Name cannot be empty!!!<b></span>";
+    return false;
+  }
+  x = document.forms["formDetails"]["emailAddress"].value;
+  if (x == "") {
+    document.getElementById("formValidation").innerHTML = "<span style='color: red;'><b>Email Address cannot be empty!!!<b></span>";
+    return false;
+  }
+  x = document.forms["formDetails"]["notes"].value;
+  if (x == "") {
+    document.getElementById("formValidation").innerHTML = "<span style='color: red;'><b>Notes cannot be empty!!!<b></span>";
+    return false;
+  }
+  else
+	document.getElementById("formValidation").innerHTML = "<span style='color: green;'><b>Validation successful!!!</em></span>";
+  return false;
+}
+</script>
+</head>
+<body>
+<div style="width:40%;margin-left:30%;border: 5px solid rgb(12, 89, 207);background-color:rgb(255, 236, 215);border-radius:1.0em;margin-top:12%">
+<table style="width:70%;margin-left:15%; margin-right:15%;" cellpadding="5">
+<form padding:2.0em;" onsubmit="return validateForm()" name = "formDetails">
+<tr>
+<td style="padding:0.5em">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+  <td style="color: rgb(12, 89, 207);text-align: right; " ><b><font size="4">First name:</font></b></td>
+  <td  style="padding: 10px;"> <input type="text" name="firstname" placeholder="First name"></td>
+</tr>
+<tr>
+  <td style="color: rgb(12, 89, 207);text-align: right;"><b><font size="4">Last name:</font></b></td>
+  <td style="padding: 10px;"><input type="text" name="lastname" placeholder="Last name"></td>
+</tr>
+<tr>
+  <td style="color: rgb(12, 89, 207);text-align: right;"><b><font size="4">Email Address:</font></b></td>
+  <td style="padding: 10px;"><input type="text" name="emailAddress" placeholder="Email Address"></td>
+</tr>
+<tr>
+  <td valign="top" style="color: rgb(12, 89, 207);text-align: right;"><b><font size="4">Notes:</font></b></td>
+  <td style="padding: 10px;"><textarea style="resize:none" rows="5" name="notes"> </textarea></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td style="padding: 10px;"><input type="submit" value="Register" style = "color:white;border:10px;background-color: rgb(12, 89, 207); width:50%;height:30px;border-radius:0.5em"></td>
+</tr>
+</form>
+<tr>
+<td style="padding:0.2em">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<p id="formValidation" style='text-align: center;'></p><br><br>
+</div>
+
+</body>
+</html>
